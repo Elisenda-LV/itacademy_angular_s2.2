@@ -1,0 +1,81 @@
+//color palette
+$rich-black: rgba(12, 22, 24, 1);
+$brunswick-green: rgba(0, 70, 67, 1);
+$cornsilk: rgba(250, 244, 211, 1);
+$gold-metallic: rgba(209, 172, 0, 1);
+$peach: rgba(246, 190, 154, 1);
+
+$primary: rgba(0, 70, 67, 1);;
+
+nav{
+    background-color: white;
+}
+
+.navbar-brand{
+    color:rgba(209, 172, 0, 1);
+}
+
+.nav-link{
+    color: rgba(0, 70, 67, 1);
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.btn{
+    background-color: rgba(255, 207, 86, 1);
+    color: rgba(0, 70, 67, 1);
+}
+
+.badge{
+    background-color: rgba(0, 70, 67, 1);
+}
+
+
+header{
+    background-color:rgba(0, 70, 67, 1);
+}
+
+p{
+    color: rgba(250, 244, 211, 1);
+}
+
+h1{
+    color: rgba(255, 207, 86, 1);
+}
+
+h2{
+    color: rgba(255, 207, 86, 1);
+    background-color: rgba(0, 70, 67, 1); 
+}
+
+
+
+h3, h4, h5, h6{
+    color: rgba(0, 70, 67, 1); 
+}
+
+tr, td, th{
+    color:rgba(0, 70, 67, 1); 
+}
+
+.modal-header{
+    background-color:white;
+}
+
+.modal-body{
+    color: rgba(0, 70, 67, 1);
+    background-color:white;
+}
+
+
+
+
+
+footer{
+    background-color: rgba(0, 70, 67, 1);
+}
+
+
+
