@@ -21,8 +21,8 @@ function validate() {
 	var errorPhone = document.getElementById("errorPhone");
   
 	// Validación de nombre y apellido (solo letras y mínimo 3 caracteres)
-	var nameRegex = /^[A-Za-z]{3,}$/;
-	if (!fName.value.match(nameRegex)) {
+	
+	if (fName.value.length < 3 || !/^[A-Za-z]+$/.test(fName.value)) {
 	  error++;
 	  fName.classList.add("is-invalid");
 	  errorName.style.display = "block";
@@ -31,7 +31,8 @@ function validate() {
 	  errorName.style.display = "none";
 	}
   
-	if (!fLastN.value.match(nameRegex)) {
+	
+	if (fLastN.value.length < 3 || !/^[A-Za-z]+$/.test(fLastN.value)) {
 	  error++;
 	  fLastN.classList.add("is-invalid");
 	  errorLastN.style.display = "block";

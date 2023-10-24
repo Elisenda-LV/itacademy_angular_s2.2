@@ -141,26 +141,18 @@ function calculateTotal() {
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
         var total = 0;
-        for (const item of cart) {
-            // Comprueba si se cumple la primera promoción: 3 o más ampolles d'oli
-            if (item.id === 1 && item.quantity >= 3) {
-                const discountAmount = item.price * 0.2; // 20% de descuento
-                item.subtotalWithDiscount = (item.price - discountAmount) * item.quantity;
-            }
-            // Comprueba si se cumple la segunda promoción: 10 o más productes per a fer pastissos
-            else if (item.id === 3 && item.quantity >= 10) {
-                const discountAmount = item.price * 0.3; // 30% de descuento
-                item.subtotalWithDiscount = (item.price - discountAmount) * item.quantity;
-            }
-            // Si no se cumple ninguna promoción, no se aplica descuento
-            else {
+        cart.forEach(item => {
+            if (item.offer && item.quantity >= item.offer.number) {
+                const discountPercentage = item.offer.percent / 100;
+                item.subtotalWithDiscount = item.price * item.quantity * (1 - discountPercentage);
+            } else {
                 item.subtotalWithDiscount = item.price * item.quantity;
             }
-            
-            total += item.subtotalWithDiscount; // Agrega el subtotal con descuento al total
+            total += item.subtotalWithDiscount;
+        });
     
-        }
-        return total;
+        total.innerText = (total.toFixed(2));
+        console.log(`El total con descuento es: ${total.toFixed(2)}`);
     }
 
 
